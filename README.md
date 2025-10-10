@@ -10,7 +10,7 @@ Proyecto de blog web creado para poner en práctica conocimientos y buenas prác
 - Mostrar el proceso completo a recruiters.
 
 ## 3. Alcance
-(Por definir)
+El proyecto abarca la creación de un blog personal estático de una sola página (o varias entradas) con secciones de presentación, artículos y contacto.
 
 ## 4. Stack tecnológico
 - HTML5, CSS3 y JavaScript
@@ -20,7 +20,19 @@ Proyecto de blog web creado para poner en práctica conocimientos y buenas prác
 - Figma
 
 ## 5. Principio de organización
-(Por definir)
+El proyecto está organizado de la siguiente forma:
+```bash
+./
+|___/assets         # Recursos estáticos del sitio
+|   |___/images     # Imágenes y gráficos
+|   |___/css        # Hojas de estilo CSS
+|   |___/js         # Scripts JavaScript
+|
+|___/docs           # Documentación y planificación del proyecto
+|___index.html      # Página principal del blog
+|___README.md       # Descripción general del proyecto
+|___LICENSE         # Licencia MIT
+```
 
 ## 6. Arquitectura del proyecto
 (Por definir)
