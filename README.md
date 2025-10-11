@@ -22,16 +22,20 @@ El proyecto abarca la creación de un blog personal estático de una sola págin
 ## 5. Principio de organización
 El proyecto está organizado de la siguiente forma:
 ```bash
-./
-|___/assets         # Recursos estáticos del sitio
-|   |___/images     # Imágenes y gráficos
-|   |___/css        # Hojas de estilo CSS
-|   |___/js         # Scripts JavaScript
-|
-|___/docs           # Documentación y planificación del proyecto
-|___index.html      # Página principal del blog
-|___README.md       # Descripción general del proyecto
-|___LICENSE         # Licencia MIT
+.
+├── LICENSE                 # Licencia MIT
+├── README.md               # Descripción general del proyecto
+├── assets                  # Recursos estáticos del sitio
+│   ├── css                 # Hojas de estilo CSS
+│   ├── images              # Imágenes y gráficos
+│   └── js                  # Scripts JavaScript
+├── docs                    # Documentación y planificación del proyecto
+│   ├── arquitectura.md
+│   ├── deployment.md
+│   ├── diseno.md
+│   ├── planificacion.md
+│   └── testing.md
+└── index.html              # Página principal del blog
 ```
 
 ## 6. Arquitectura del proyecto
