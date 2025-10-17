@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    /* Elimino margen por defecto del navegador */
+    font-family: system-ui, sans-serif;
+    
+    background-color: #0e0e0e
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0e0e0e;
+    border-bottom: 1px solid #fff;
+    padding: 0.5rem 5rem;
+}
+
+#container-skip {
+    background-color: aliceblue;
+}
+
+.logo {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    /* 10% del ancho de la ventana */
+    height: auto;
+    max-width: 110px;
+    /* límite superior */
+    min-width: 50px;
+    /* límite inferior */
+}
+
+#logo-header {
+    width: 5vw;
+    height: auto;
+}
+
+h1 {
+    font-size: 1.9rem;
+    color: aliceblue;
+    align-content: center;
+    text-decoration: none;
+}
+
+nav ul {
+    font-size: 1.2rem;
+    font-weight: 500;
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+}
+
+a.logo {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:not(.logo) {
+    text-decoration: none;
+    color: aliceblue;
+    display: inline-block;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+a:hover:not(.logo) {
+    color: #db07b1;
+    transform: scale(1.20);
+}
+
+#skip-main {
+    padding: 5px;
+    display: block;
+    text-align: center;
+    color: black;
+}
+
+#skip-main:hover {
+    color: #db07b1;
+    transform: none;
+}
+
+button {
+    padding: 0.75rem 1.6rem;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: system-ui, sans-serif;
+    color: #fff;
+    background: #0066ff;
+    /* azul vibrante */
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    overflow: hidden;
+    /* necesario para el ripple */
+    position: relative;
+    transition: background 0.25s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Sombra ligera al pasar */
+button:hover {
+    background: #db07b1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
