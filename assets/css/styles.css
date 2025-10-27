@@ -157,29 +157,29 @@ body {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    width: 60px;
-    height: 60px;
+    width: 3.5rem;
+    height: 3.5rem;
     border: none;
     border-radius: 50%;
     background: var(--color-accent, #0d6efd);
     color: #fff;
     display: none;
-    /* luego se activará con JS */
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
     z-index: 1000;
 }
 
 #scrollTopBtn:hover {
-    background: var(--color-accent-hover, #0b5ed7);
-    transform: translateY(-3px);
+    background: var(--color-accent-alt, #d70b6a);
+    transform: translateY(-0.2rem);
 }
 
 #scrollTopBtn svg {
-    pointer-events: none;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 /* ========== Hero / Texto general ========== */
