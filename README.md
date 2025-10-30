@@ -39,16 +39,20 @@ El proyecto está organizado de la siguiente forma:
 ```
 
 ## 6. Arquitectura del proyecto
-(Por definir)
+Consulta la información en el archivo [/docs/arquirectura.md](/docs/arquitectura.md).
 
 ## 7. Buenas prácticas aplicadas
-(Por definir)
+Se ha tratado de seguir buenas prácticas como:
+- Utilizar *conventional commits*.
+- Dividir el repositorio en ramas bien diferenciadas.
+- Aplicar Pull-Request y Merge para unificar los cambios de manera fiable y segura.
+- Tratar de seguir pautas de accesibilidad para el contenido web (WCAG).
 
 ## 8. Documentación de cada fase
-(Por definir)
+Consulta la documentación referente a cada una de las fases en el siguiente archivo [/docs](/docs).
 
 ## 9. Resultados
-(Por definir)
+Observa el resultado final haciendo click en el siguiente enlace: [GitHub Pages](https://alexguti-eng.github.io/blog-personal/).
 
 ## 10. Licencia
 Este proyecto está bajo la licencia [MIT](./LICENSE).
