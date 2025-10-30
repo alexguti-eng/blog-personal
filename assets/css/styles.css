@@ -7,7 +7,7 @@
     --color-muted: #ccc;
 
     --container-max: 1200px;
-    --spacing-section: 5rem;
+    --spacing-section: 2.5rem;
     --radius: 0.5rem;
 }
 
@@ -61,7 +61,7 @@ body {
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 2rem;
     align-items: center;
 }
 
@@ -74,7 +74,6 @@ body {
 .section-header p {
     font-size: 1.125rem;
     color: var(--color-muted);
-    margin-top: 2rem;
     text-align: justify;
     text-justify: inter-word;
     /* reparte el espacio entre palabras */
@@ -182,6 +181,115 @@ body {
     height: 1.5rem;
 }
 
+/* ========== Modal ========== */
+.modal {
+    position: fixed;
+    inset: 0;
+    /* top/right/bottom/left = 0 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .25s ease, visibility .25s ease;
+}
+
+/* Cuando el modal está visible */
+.modal:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ==== Caja del modal ==== */
+.modal-content {
+    width: 90%;
+    /* ancho máximo en móviles */
+    max-width: 420px;
+    /* ancho máximo en pantallas grandes */
+    padding: 2rem;
+    border-radius: var(--radius);
+    background: #111;
+    /* ligeramente más claro que el fondo */
+    color: var(--color-text);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .6);
+    position: relative;
+}
+
+/* ==== Botón cerrar ==== */
+.close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: transparent;
+    border: none;
+    color: var(--color-muted);
+    font-size: 1.6rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color .2s;
+}
+
+.close:hover {
+    color: var(--color-accent-alt);
+}
+
+/* ==== Formulario ==== */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.modal-content label {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: var(--radius);
+    background: #1a1a1a;
+    color: var(--color-text);
+    font: inherit;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    background: #222;
+}
+
+/* ==== Mensaje de estado ==== */
+#statusMsg {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-accent);
+}
+
+/* ==== Pequeña animación de aparición ==== */
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    animation: slideUp .3s ease-out;
+}
+
 /* ========== Hero / Texto general ========== */
 .hero-text h2 {
     font-size: clamp(2rem, 5vw, 3.5rem);
@@ -192,7 +300,7 @@ body {
 .hero-text p {
     font-size: 1.125rem;
     color: var(--color-muted);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     max-width: 50ch;
     text-align: justify;
     text-justify: inter-word;
@@ -203,8 +311,14 @@ body {
     /* interlineado */
 }
 
+.hero-text button {
+    margin-top: 0.5rem;
+}
+
 .hero-image img {
     width: 100%;
+    max-height: 400px;
+    object-fit: cover;
     height: auto;
 }
 
